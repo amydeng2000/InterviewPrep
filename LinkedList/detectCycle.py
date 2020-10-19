@@ -7,7 +7,7 @@ class Solution(object):
             if fast == slow:
                 break
         if not (fast and fast.next):
-            return null
+            return None
         fast = head
         while fast != slow:
             fast = fast.next
