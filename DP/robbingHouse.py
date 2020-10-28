@@ -1,22 +1,31 @@
 class Solution(object):
-    def rob(self, nums):
+    def coinChange(self, coins, amount):
         """
-        :type nums: List[int]
+        :type coins: List[int]
+        :type amount: int
         :rtype: int
         """
-        if len(nums) == 0:
-            return 0
-        if len(nums) == 1:
-            return nums[0]
-        mem = [-1]*len(nums)
-        self.helper(nums, mem, len(nums)-1)
-        return max(mem[len(nums)-1], mem[len(nums)-2])
+        if amount == 0: return 0
+        if amount < 0: return -1
+        mem = [float('inf')]*(amount+1)
+        for i in range(0,amount+1):
+            mem[i] = self.helper(coins, i, mem)
+            print("mem[{0}] = {1}".format(i, mem[i]))
+        if mem[amount] == float('inf'):
+            return -1
+        return mem[amount]
+    
+    def helper(self, coins, amount, mem):
+        if amount == 0: return 0
+        if amount < 0: return float('inf')
+        if mem[amount] == float('inf'):
+            for coin in coins:
+                mem[amount] = min(mem[amount], 1+self.helper(coins, amount-coin, mem))
+        return mem[amount]
         
-    def helper(self, nums, mem, i):
-        if i < 0:
-            return 0
-        if mem[i] < 0:
-            mem[i] = max(nums[i]+self.helper(nums, mem, i-2), self.helper(nums, mem, i-1))
-        print(mem[i])
-        return mem[i]
+    
+s = Solution()
+print(s.coinChange([1,2,5], 11))
+
+        
         
