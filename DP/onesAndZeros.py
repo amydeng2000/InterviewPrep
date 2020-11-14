@@ -19,7 +19,7 @@ class Solution(object):
         return m, n
         
     def helper(self, strs, i, m, n, mem):
-        if m < 0 or n < 0: return -1
+        if m < 0 or n < 0: return -1   # this condition goes first!!
         if i < 0: return 0
         if (i, m, n) in mem: return mem[(i, m, n)]
         k, p = self.count(strs[i])
