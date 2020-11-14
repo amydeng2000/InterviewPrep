@@ -19,10 +19,9 @@ class Solution(object):
         return m, n
         
     def helper(self, strs, i, m, n, mem):
+        if m < 0 or n < 0: return -1
         if i < 0: return 0
         if (i, m, n) in mem: return mem[(i, m, n)]
         k, p = self.count(strs[i])
-        mem[(i, m, n)] = self.helper(strs, i-1, m, n, mem)
-        if k <= m and p <= n:
-            mem[(i, m, n)] = max(mem[(i, m, n)], 1+self.helper(strs, i-1, m-k, n-p, mem))
+        mem[(i, m, n)] = max(self.helper(strs, i-1, m, n, mem), 1+self.helper(strs, i-1, m-k, n-p, mem))
         return mem[(i, m, n)]
