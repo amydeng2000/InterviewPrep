@@ -23,7 +23,7 @@ class Solution(object):
                 if p[1] in mem: 
                     flag = False
                     return False
-                self.dfs(p[1], prerequisites, mem, flag)
+                return self.dfs(p[1], prerequisites, mem, flag)
         return flag
 
 s = Solution()
