@@ -9,23 +9,16 @@ class Solution(object):
         print(0 in [0, 1])
         for i in range(numCourses):
             mem = []
-            if self.dfs(i, prerequisites, mem, True) == False: 
+            if self.dfs(i, prerequisites, mem) == False: 
                 return False
         return True
     
-    def dfs(self, course, prerequisites, mem, flag):
+    def dfs(self, course, prerequisites, mem):
         mem.append(course)
+        flag = True
         for p in prerequisites:
-            if not flag: return False
             if p[0] == course:
-                print(p[1])
-                print(mem)
                 if p[1] in mem: 
-                    flag = False
                     return False
-                return self.dfs(p[1], prerequisites, mem, flag)
+                flag = flag and self.dfs(p[1], prerequisites, mem)
         return flag
-
-s = Solution()
-prereq = [[0,1], [1,0]]
-print(s.canFinish(2, prereq))
