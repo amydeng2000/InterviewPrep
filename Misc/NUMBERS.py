@@ -15,6 +15,7 @@
 
 # RANDOM
 import random
-print(random.randrange(1, 3))
-print(random.randrange(1, 3))
-print(random.randrange(1, 3))
+# .randrange(start, stop, step) - return int
+random.randrange(1, 3)  # 1 or 2
+# .randint(start, stop) - return int, inclusive bounds
+random.randint(1, 3)  # 1 or 2 or 3
