@@ -3,6 +3,14 @@
 - ASCII or Unicode? There are 128 characters in ASCII, 256 in unique ASCII
 - White space?
 - Case sensitive?
+- Non alphabetic/numeric chars?
+"""
+
+# METHODS
+"""
+- s.isalnum()  -> returns True if the string only contains alphabetic & numeric chars
+- s.lower()
+- s[start:end] -> slicing doesn't error if end > len(s)
 """
 
 
@@ -38,8 +46,3 @@ new_num = int(string)
 # STRING COMPARISON
 'a' == 'a'  # True
 "abc" == "abc"  # True
-
-
-
-
-print(int('9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999'))

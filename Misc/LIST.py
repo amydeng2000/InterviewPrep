@@ -14,6 +14,14 @@ d3.clear()  # empty the que, d3 = []
 
 
 
+# STACK: Last in first out
+"""
+implement using regular array!
+.append()
+.pop()
+"""
+
+
 # ARRAYS
 arr1 = [1,3,2]
 arr2 = list('123') # ['1', '2', '3']

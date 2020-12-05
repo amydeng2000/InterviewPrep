@@ -55,3 +55,8 @@ list(od.items())[0]  # ('a', 1) NEED to put it in a list first.
 # thus is required to be put into a list first before indexing
 
 
+# SORTING dictionaries (dict, counter, etc)
+d = {"a":1, "b":2, "c":3}
+sortedList = sorted(d.items(), key=lambda x:x[1], reverse=True)  # sort by value, reversed
+od = OrderedDict(sortedList)  # put it into ordered dict
+
