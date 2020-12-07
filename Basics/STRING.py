@@ -10,9 +10,14 @@
 """
 - s.isalnum()  -> returns True if the string only contains alphabetic & numeric chars
 - s.lower()
-- s[start:end] -> slicing doesn't error if end > len(s)
+- s[start:end] -> slicing doesn't error if start or end > len(s)
+- s.index(c) -> position of first index
 """
 
+# TRICKS
+"""
+- ans[::2], ans[1::2] = feed[(len+1)/2:], feed[:(len+1)/2]  -> interleaving strings
+"""
 
 # ITERATE through strings
 s1 = "abcd"

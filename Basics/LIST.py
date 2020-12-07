@@ -34,6 +34,7 @@ arr2 = list('123') # ['1', '2', '3']
 - .count(x): return frequency
 - .sort(arr, key=lambda x: expression(x), reverse=True): sort in place
 - sorted(arr): returns a copy of a sorted array
+- .reverse(): reverse in place
 """
 arr3 = sorted(arr1)  # arr3 = [1, 2, 3] this takes up extra space tho!!
 arr1.sort()  # arr1 = [1, 2, 3]
