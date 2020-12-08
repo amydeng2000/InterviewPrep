@@ -32,13 +32,22 @@ arr2 = list('123') # ['1', '2', '3']
 - .pop(i)
 - .index(x): return the first index 
 - .count(x): return frequency
-- .sort(arr, key=lambda x: expression(x), reverse=True): sort in place
+- arr.sort(key=lambda x: expression(x), reverse=True): sort in place. 
 - sorted(arr): returns a copy of a sorted array
 - .reverse(): reverse in place
 """
 arr3 = sorted(arr1)  # arr3 = [1, 2, 3] this takes up extra space tho!!
 arr1.sort()  # arr1 = [1, 2, 3]
 arr2.reverse()  # arr2 = [3, 2, 1] reverse the elements in place, not reverse sort
+# TRICKY SORTS USING CMP (cmp is just a function defining what you mean by smaller values)
+from functools import cmp_to_key
+def comp(a, b): # compare absolute values, return -1 if self < other, 1 of self > other, 0 if equal
+    if abs(a) < abs(b): return -1
+    if abs(a) > abs(b): return 1
+    return 0
+arr3 = [-2, 1, -3]
+arr3.sort(key=cmp_to_key(comp))
+arr3  #[1, -2, -3]
 
 
 

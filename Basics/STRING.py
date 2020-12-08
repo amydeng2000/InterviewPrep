@@ -17,6 +17,11 @@
 # TRICKS
 """
 - ans[::2], ans[1::2] = feed[(len+1)/2:], feed[:(len+1)/2]  -> interleaving strings
+- check if s2 is one insertion away from s1:
+    - fast but long: iterate through s1 s2 at the same time, increase s2's pointer if different, flag if you've seen difference twice +
+    - slower but short: for i in len(s2), check if s2[:i]+s2[i+1:] == s1
+- check if s2 is one replacement away from s1: iterate through both strings, use a flag to track if already found difference
+- check if s2 is s1 rotated: check if s1 is a substring of s2*2, because if x1 = xy, x2 = yx, yxyx should contain xy
 """
 
 # ITERATE through strings
