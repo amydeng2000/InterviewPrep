@@ -1,3 +1,18 @@
+# CLARIFYING QUESTIONS
+"""
+- Modify in-place or create an additional linked list?
+- Is a temporary buffer allowed?
+"""
+
+# APPROACH & TRICKS
+"""
+- copying next data to the current node to delete the current node without having to access the previous pointer
+- use hashmap to store nodes if we need to perform operations on the values
+- runner technique
+- find intersecting node: get the length of both linked lists, advance the longer list's pointer by the difference in length
+    - now they have the same length, move both pointers, see where they collide
+"""
+
 class Node:
     def __init__(self, x=0, next=None):
         self.val = x
@@ -24,15 +39,6 @@ def delete(head, d): # remove node with data d, return the rest of the linked li
             return head
         ptr = ptr.next
     return head
-
-
-# APPROACH & TRICKS
-"""
-- Modify in-place or create an additional linked list?
-- copying next data to the current node to delete the current node without having to access the previous pointer
-- use hashmap to store nodes if we need to perform operations on the values
-- runner technique
-"""
 
 
 # RUNNER TECHNIQUE
