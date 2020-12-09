@@ -88,3 +88,6 @@ s3.add('a')
 s3.add('2')
 len(s3)  # 2
 
+
+
+# TUPLE: immutable pairs!
