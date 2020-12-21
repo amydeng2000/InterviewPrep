@@ -23,3 +23,9 @@ random.randint(1, 3)  # 1 or 2 or 3
 import math
 from math import floor
 floor(1.89)  # 1
+
+
+# DIVISION
+4 / 3 = 1   # for integers, / works as floor division
+float(5) / 4 = 1.25   # / is accurate div for floats
+float(5) // 4 = 1   # // is the real floor div
