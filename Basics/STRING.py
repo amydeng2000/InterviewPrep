@@ -10,6 +10,7 @@
 """
 - s.isalnum()  -> returns True if the string only contains alphabetic & numeric chars
 - s.isalph()  -> check if a string only contains alphabetic characters
+- s.isdigit() -> check if a string is a digit
 - s.lower()
 - s[start:end] -> slicing doesn't error if start or end > len(s)
 - s.index(c) -> position of first index
@@ -18,7 +19,7 @@
 # TRICKS
 """
 - ans[::2], ans[1::2] = feed[(len+1)/2:], feed[:(len+1)/2]  -> interleaving strings
-- check if s1, s2 are rearrangements of the same letters: sort the strings and compare!
+- check if s1, s2 are rearrangements of the same letters (anagram): sort the strings and compare!
 - check if s2 is one insertion away from s1:
     - fast but long: iterate through s1 s2 at the same time, increase s2's pointer if different, flag if you've seen difference twice +
     - slower but short: for i in len(s2), check if s2[:i]+s2[i+1:] == s1

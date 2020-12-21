@@ -89,5 +89,35 @@ s3.add('2')
 len(s3)  # 2
 
 
-
 # TUPLE: immutable pairs!
+
+
+# BISECT
+import bisect
+arr = [1,2,3,5,6]
+i = bisect.bisect(arr, 4) # i = 3 b/c 4 is between index 2, 3 and bisect returns the later index
+# Bisect locate the insertion point for x in a to maintain sorted order.
+# - returns the index after the biggest element that's smaller than x
+
+arr = [[-1, 0], [3, 2], [5, 4], [6, 0]]
+i = bisect.bisect(arr, [4, 67846])  # if x is a list, look at the first element 
+print(i)  # 2
+
+arr = [1,2,3,4]
+print(arr[-2:])
+
+
+def cancomplie(target, build)
+    seen = set()
+    seen.add()
+    return cancomplieHelper(target)
+
+    def cancomplieHelper(target, build, seen)
+        if target not in build: return False
+        for file in build[target]:
+            if file in seen: return False
+            seen.add(file):
+            if not cancomplieHelper(file, build, seen):
+                    return False
+            seen.remove(file)
+        return True

@@ -19,3 +19,7 @@ import random
 random.randrange(1, 3)  # 1 or 2
 # .randint(start, stop) - return int, inclusive bounds
 random.randint(1, 3)  # 1 or 2 or 3
+
+import math
+from math import floor
+floor(1.89)  # 1

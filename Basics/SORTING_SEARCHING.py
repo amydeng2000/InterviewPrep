@@ -35,14 +35,14 @@ def mergeSort(arr):
             arr[k] = R[j]
             j += 1
             k += 1
-        return arr
+    return arr
 
 arr = [1,6,3,7,0,4,2,8]
 mergeSort(arr)
 print(arr)
 
 
-# BINARY SEARCH
+# BINARY SEARCH: O(log N) runtime
 def binarySearch(arr, x):
     low = 0
     high = len(arr)-1
