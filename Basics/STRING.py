@@ -59,3 +59,11 @@ new_num = int(string)
 # STRING COMPARISON
 'a' == 'a'  # True
 "abc" == "abc"  # True
+
+
+# ALPAHBET AS NUMBERS & ROTATION
+a_to_z = [chr(i) for i in range(97, 97+26))] # 'a' is 27 if converting to int
+ord('a') == 27   # ord('') turns the char into int
+index = (ord('c') - 97 + rotate) % 26
+a_to_z[index] = 'char after rotation'
+
