@@ -11,17 +11,18 @@ from collections import deque
 visited = [False for _ in nodes] # or an empty array to add to
 def bfs(i):
     q = deque()
+    visited[i] = True
     q.append((i)) # OR append((level, i))  -> usually slow and takes up a lot of memory!
     while q:
-        x, y = q.popleft() # this pops one node at a time
-        for node in neighbors:
+        x = q.popleft() # this pops one node at a time
+        for node in x.neighbors:
             if valid and not visited[node]:
                 visited[node] = True
                 q.append(node) # OR 
         passes += 1
 
     """
-    if we want to deal with one order at a time...
+    if we want to deal with one level at a time...
     count = 0
     while q:
         nextQ = deque()
