@@ -17,3 +17,11 @@ Sliding Window
     - sol1: slide three windows across, each of size 4, 21, 61. If the len=4 window contain all the same index, drop
     - sol2: utilize indecies. if i>=20 and requestTies[i] - requestTimes[i-20] < 10: drop i
 """
+
+
+# TRICKS
+"""
+- how to keep a nonlocal variable that every recursive call can mutate/add to? 
+    - do self.var =  
+    - Lists are default to be nonlocal 
+"""

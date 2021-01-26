@@ -18,13 +18,6 @@
 - Postorder: left child, right child, node
 """
 
-# TRICKS
-"""
-- how to keep a nonlocal variable that every recursive call can mutate/add to? 
-    - do self.var =  
-    - Lists are default to be nonlocal 
-"""
-
 class Node:
     def __init__(val=0, left=None, right=None):
         self.val = val
